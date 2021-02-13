@@ -1,0 +1,29 @@
+body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+.header, .footer {
+    background-color: #063C5E;
+    color: white;
+
+}
+
+.headfootlink {color:white;
+    list-style-type: none;}
+
+hr {
+    background-color:#fccf14 ;
+    border: 0;
+    height: 5px;
+}
+
+#codesquad-comics-logo {
+    width: 300px;
+}
+
+#codesquad-logo {
+    width: 150px;
+}
