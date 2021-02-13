@@ -18,6 +18,7 @@ hr {
     background-color:#fccf14 ;
     border: 0;
     height: 5px;
+    margin: 0px
 }
 
 #codesquad-comics-logo {
@@ -26,4 +27,56 @@ hr {
 
 #codesquad-logo {
     width: 150px;
+}
+
+.comic-cover {
+    width: 200px
+}
+
+.comic-card {
+
+    background-color:#063C5E;
+    border-color: #fccf14;
+    border-radius: 50px 50px 50px 50px;
+    border-style: solid;
+    border-width: 5px;
+    color: #fccf14;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20%;
+    text-align: center;
+    height: 1200px;
+    width: 600px;
+
+}
+
+.card-cover {
+    border-color: #ffffff;
+    border-radius: 50px 50px 50px 50px;
+    border-style: solid;
+    border-width: 5px;
+    margin-bottom: 25px;
+    width: 400px;
+
+}
+
+.card-texbox {
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 0px 50px 50px;
+    margin-top: 0px;
+    height: 513px;
+    width: 600px
+}
+
+.cardhr {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.card-heading {
+    color:#063C5E;
+    text-align: left;
+    margin-left:20px;
+    margin-top:0px;
+    text-decoration: underline;
 }
