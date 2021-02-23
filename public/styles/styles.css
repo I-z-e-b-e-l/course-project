@@ -1,0 +1,291 @@
+body {
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    margin: 0px;
+    overflow-x: hidden;
+    background-image: linear-gradient(rgb(198, 238, 232), rgb(22, 125, 133));
+}
+
+/* Header & Footer Styling */
+.header, .footer {
+    background-color: #063C5E;
+    color: white;
+
+}
+/* Header Styling */
+
+#codesquad-comics-logo {
+    width: 300px;
+    padding: 1% 
+    /* padding-top: 1%;
+    padding-right: 70%;
+    padding-left: 1%; */
+}
+
+.headlink {
+    color:white;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 1% 15% 2% 5%;
+    /* display: inline-block; */
+}
+
+.header li {
+    display: inline;
+}
+
+.header a:hover {
+    color: #fccf14;
+    font-weight: bold;
+}
+
+.header a:active {
+    color: blue;
+    background-color: #fccf14;
+}
+
+/* Footer Styling */
+
+.footer {
+    border-top: 5px #fccf14 solid;
+}
+
+.footer-table {
+    width: 100%;
+    text-align: left;
+    padding: 3%;
+}
+
+.footer-table a {
+    color:white;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.footer-table th {
+    color:#fccf14;
+    text-align: left;
+    width: 23%;
+}
+
+.footer a:hover {
+    color: #fccf14;
+    font-weight: bold;
+}
+
+.footer a:active {
+    color: blue;
+    background-color: #fccf14;
+}
+
+#codesquad-logo {
+        width: 150px;
+    }
+
+/* Misc Page Stylings */
+
+hr {
+    background-color:#fccf14;
+    border: 0;
+    height: 5px;
+    margin: 0px
+}
+
+/* Big Yellow Button Stylings (Admin + Create + Index Pages) */
+
+input[name="add-new-comic"], input[type="submit"] {
+    background-color: #fccf14;
+    margin: 0 auto;
+    display: block;
+   
+}   /*select by name/class instead?*/
+
+input[name="display-more"] {
+    background-color: #fccf14;
+    margin-left: 40px;
+    /* display: block; */
+
+    /* fix margins... why is pargin size different than padding size??*/
+}
+
+
+/* Content-Box (About + Admin + Create) Page Stylings */
+
+.content-box {
+    background-color: white;
+    border: black 5px solid;
+    margin: 6% auto;
+    width: 75%;
+    padding-bottom: 3%;
+    /* padding-left: 1%; */
+}
+
+.content-box h1, h2 {
+    text-align: center;
+    color: #063C5E;
+    margin-top: 6%;
+}
+
+.content-box p {
+    padding: 0% 5%;
+}
+
+.content-box ul {
+    padding-left: 10%;
+    padding-bottom: 4%
+}
+
+/* Create Page Stylings */
+
+/* form { */
+    /* background-color: lavender; */
+    /* width: 100%; */
+/* } */
+
+.form-box {
+    /* background-color: rgb(108, 182, 224); */
+    margin: 3% 35% 3% 10%;
+    text-align: right;
+}
+
+.form-box input{
+    width: 250px;
+}
+
+#publisher {
+    width: 260px;
+}
+
+/* Re-do? - See update page*/
+.form-box input[type="textarea"]{
+    height: 150px;
+    /* text-align:; */
+}
+
+
+/* Admin Page Stylings */
+
+
+input[name="edit"] {
+    background-color: #063C5E;
+    color: white;
+    width: 6em;
+    /* padding-left: 0px; */
+    /* margin: 0 auto;
+    display: block;
+    font-size: .75em;
+    width: 60px; */
+ } 
+
+input[name="delete"] {
+    background-color: #fccf14;
+    color: black;
+    width: 6em;
+    /* padding-left: 0px; */
+    /* margin: 1.5% auto;
+    display: block;
+    font-size: .75em;   */
+}
+
+.admin-table th {
+    background-color: rgb(205, 218, 218);
+    padding: 6px 8px;
+    border: black solid 1px; 
+}
+
+.admin-table td {
+    padding: 3px 10px;
+    border: black solid 1px; 
+}
+
+.admin-table tr:nth-child(even){
+    background-color: rgb(205, 218, 218);
+}
+
+.admin-table {
+    margin: auto;
+    margin-bottom: 3%;
+    font-size: .85em;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+
+/* Index Page Stylings */
+.comic-cover {
+    width: 200px
+}
+
+/* Comic Card Page Stylings */
+
+
+.parent {
+    /* background-color: rgb(66, 63, 63); */
+    width: 50%;
+    margin-top: 3%;
+    margin-left: 25%;
+    /* margin: auto; */
+}
+
+.child1 {
+    background-color: #063C5E;
+    border-color: #fccf14; 
+    border-radius: 50px 50px 0px 0px;
+    border-style: solid;
+    border-width: 5px 5px 0px 5px; 
+    /* border-bottom: 5px red solid; */
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.child1 h2 {
+    text-align: center;
+    color: #fccf14;
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+.child1 img {
+    width: 60%;
+    border-color: white;
+    border-radius: 50px 50px 50px 50px;
+    border-style: solid;
+    border-width: 5px;
+    margin-left: 20%;
+    margin-bottom: 5%;
+}
+
+.child2 {
+    background-color: white;
+    border-color: #fccf14;
+    border-radius: 0px 0px 50px 50px;
+    border-style: solid;
+    border-width: 5px;
+    margin-top: 0px;
+    margin-bottom: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.cardinfo {
+    color: #063C5E;
+    text-decoration: underline;
+    font-weight: bold;
+    font-style: normal; 
+
+}
+.child2 h3 {
+    margin-left: 10%;
+    margin-right:10%;
+    margin-top: 0px;
+    /* padding: 0%; */
+    padding-right: 7%;
+    color: black;
+    font-weight:normal;
+}
+
+.cardtitle {
+    font-style: italic;
+}
+

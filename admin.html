@@ -3,216 +3,232 @@
   <head>
     <meta charset="utf-8">
     <title>CodeSquad Comics - Admin</title>
-    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="./public/styles/styles.css">
 
   </head>
-  <div class="header">
-    <a href="index.html">
-    <img src="./public/images/CodeSquad-Comics-logo.png" alt="CodeSquad Comics Logo" id="codesquad-comics-logo">
-    </a>
 
+<!--Header Begin-->
 
-    <ul class="headfootlink">
-      <li><a href="home.html" class="headfootlink">HOME</a>
-      </li>
-      <li><a href="about.html" class="headfootlink">ABOUT</a>
-      </li>
-      <li><a href="login.html" class="headfootlink">LOGIN</a>
-      </li>
-    </ul>
-    <br>
-  </div>
+<div class="header">
+  <a href="index.html">
+  <img src="./public/images/CodeSquad-Comics-logo.png" alt="CodeSquad Comics Logo" id="codesquad-comics-logo">
+  </a>
 
-<h1>ADMIN PAGE</h1>
+  <ul class="headlink">
+    <li><a href="index.html" class="headlink">HOME</a>
+    </li>
+    <li><a href="about.html" class="headlink">ABOUT</a>
+    </li>
+    <li><a href="login.html" class="headlink">LOGIN</a>
+    </li>
+  </ul>
+</div>
 
-<input type="button" name="add-new-comic" value="ADD NEW COMIC">
-<br /><br />
+<!-- Header End -->
 
+<div class=content-box>
 
-<table>
-  <tr>
-    <th>
-      COMIC TITLE
-    </th>
-    <th>
-      EDIT
-    </th>
-    <th>
-      DELETE
-    </th>
-  </tr>
-  <tr>
-    <td>
-      Batman: The Dark Knight Returns
-    </td>
-    <td>
-      <input type="button" name="edit" value="EDIT">
-    </td>
-    <td>
-      <input type="button" name="delte" value="DELETE">
-    </td>
-  </tr>
+  <h1>ADMIN PAGE</h1>
 
-  <tr>
-    <td>
-      Black Panther: A Nation Under Our Feet Book 1
-    </td>
-    <td>
-      <input type="button" name="edit" value="EDIT">
-    </td>
-    <td>
-      <input type="button" name="delte" value="DELETE">
-    </td>
-  </tr>
+  <input type="button" class="yellowbutton" name="add-new-comic" value="ADD NEW COMIC">
+  <br /><br />
 
-  <tr>
-    <td>
-      Fun Home: A Family Tragicomic
-    </td>
-    <td>
-      <input type="button" name="edit" value="EDIT">
-    </td>
-    <td>
-      <input type="button" name="delte" value="DELETE">
-    </td>
-  </tr>
+  <table class="admin-table">
+    <thead>
+      <tr>
+        <th>COMIC TITLE</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
+      </tr>
+    </thead>
+        <tr>
+          <td>
+            Batman: The Dark Knight Returns
+          </td>
+          <td>
+            <input type="button" name="edit" value="EDIT">
+          </td>
+          <td>
+            <input type="button" name="delete" value="DELETE">
+          </td>
+        </tr>
 
-  <tr>
-    <td>
-      Hunter X Hunter Vol. 1
-    </td>
-    <td>
-      <input type="button" name="edit" value="EDIT">
-    </td>
-    <td>
-      <input type="button" name="delte" value="DELETE">
-    </td>
-  </tr>
+        <tr>
+          <td>
+            Black Panther: A Nation Under Our Feet Book 1
+          </td>
+          <td>
+            <input type="button" name="edit" value="EDIT">
+          </td>
+          <td>
+            <input type="button" name="delete" value="DELETE">
+          </td>
+        </tr>
 
-  <tr>
-    <td>
-      Lumberjanes Vol. 1
-    </td>
-    <td>
-      <input type="button" name="edit" value="EDIT">
-    </td>
-    <td>
-      <input type="button" name="delte" value="DELETE">
-    </td>
-  </tr>
+        <tr>
+          <td>
+            Fun Home: A Family Tragicomic
+          </td>
+          <td>
+            <input type="button" name="edit" value="EDIT">
+          </td>
+          <td>
+            <input type="button" name="delete" value="DELETE">
+          </td>
+        </tr>
 
-  <tr>
-    <td>
-      March: Book One
-    </td>
-    <td>
-      <input type="button" name="edit" value="EDIT">
-    </td>
-    <td>
-      <input type="button" name="delte" value="DELETE">
-    </td>
-  </tr>
+        <tr>
+          <td>
+            Hunter X Hunter Vol. 1
+          </td>
+          <td>
+            <input type="button" name="edit" value="EDIT">
+          </td>
+          <td>
+            <input type="button" name="delete" value="DELETE">
+          </td>
+        </tr>
 
-  <tr>
-    <td>
-      One Piece, Vol. 1: Romance Dawn
-    </td>
-    <td>
-      <input type="button" name="edit" value="EDIT">
-    </td>
-    <td>
-      <input type="button" name="delte" value="DELETE">
-    </td>
+        <tr>
+          <td>
+            Lumberjanes Vol. 1
+          </td>
+          <td>
+            <input type="button" name="edit" value="EDIT">
+          </td>
+          <td>
+            <input type="button" name="delete" value="DELETE">
+          </td>
+        </tr>
 
-    <tr>
-      <td>
-        Parable of the Sower
-      </td>
-      <td>
-        <input type="button" name="edit" value="EDIT">
-      </td>
-      <td>
-        <input type="button" name="delte" value="DELETE">
-      </td>
-    </tr>
+        <tr>
+          <td>
+            March: Book One
+          </td>
+          <td>
+            <input type="button" name="edit" value="EDIT">
+          </td>
+          <td>
+            <input type="button" name="delete" value="DELETE">
+          </td>
+        </tr>
 
-    <tr>
-      <td>
-        Queer: A Graphic History
-      </td>
-      <td>
-        <input type="button" name="edit" value="EDIT">
-      </td>
-      <td>
-        <input type="button" name="delte" value="DELETE">
-      </td>
-    </tr>
+        <tr>
+          <td>
+            One Piece, Vol. 1: Romance Dawn
+          </td>
+          <td>
+            <input type="button" name="edit" value="EDIT">
+          </td>
+          <td>
+            <input type="button" name="delete" value="DELETE">
+          </td>
 
-    <tr>
-      <td>
-        The Walking Dead, Vol. 1 Days Gone Bye
-      </td>
-      <td>
-        <input type="button" name="edit" value="EDIT">
-      </td>
-      <td>
-        <input type="button" name="delte" value="DELETE">
-      </td>
-    </tr>
+          <tr>
+            <td>
+              Parable of the Sower
+            </td>
+            <td>
+              <input type="button" name="edit" value="EDIT">
+            </td>
+            <td>
+              <input type="button" name="delete" value="DELETE">
+            </td>
+          </tr>
 
-    <tr>
-      <td>
-        Wake: The Hidden History of Women-Led Slave Revolts
-      </td>
-      <td>
-        <input type="button" name="edit" value="EDIT">
-      </td>
-      <td>
-        <input type="button" name="delte" value="DELETE">
-      </td>
-    </tr>
+          <tr>
+            <td>
+              Queer: A Graphic History
+            </td>
+            <td>
+              <input type="button" name="edit" value="EDIT">
+            </td>
+            <td>
+              <input type="button" name="delete" value="DELETE">
+            </td>
+          </tr>
 
-    <tr>
-      <td>
-        Watchmen
-      </td>
-      <td>
-        <input type="button" name="edit" value="EDIT">
-      </td>
-      <td>
-        <input type="button" name="delte" value="DELETE">
-      </td>
-    </tr>
+          <tr>
+            <td>
+              The Walking Dead, Vol. 1 Days Gone Bye
+            </td>
+            <td>
+              <input type="button" name="edit" value="EDIT">
+            </td>
+            <td>
+              <input type="button" name="delete" value="DELETE">
+            </td>
+          </tr>
 
-</table>
+          <tr>
+            <td>
+              Wake: The Hidden History of Women-Led Slave Revolts
+            </td>
+            <td>
+              <input type="button" name="edit" value="EDIT">
+            </td>
+            <td>
+              <input type="button" name="delete" value="DELETE">
+            </td>
+          </tr>
 
+          <tr>
+            <td>
+              Watchmen
+            </td>
+            <td>
+              <input type="button" name="edit" value="EDIT">
+            </td>
+            <td>
+              <input type="button" name="delete" value="DELETE">
+            </td>
+          </tr>
+
+      </table>
+
+</div>
+
+<!-- Footer Begin -->
 
 <div class="footer">
-  <hr>
+  <table class="footer-table">
+    <thead>
+      <tr>
+        <th>VISIT US</th>
+        <th>LINKS</th>
+        <th>FOLLOW US</th>
+        <th>A PRODUCT OF</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          CodeSquad Comics<br />
+          123 Dorchester Avenue<br />
+          Boston MA 02124
+        </td>
+        <td>
+          <a href="index.html" class="footlink">Home</a><br />
+          <a href="about.html" class="footlink">About</a><br />
+          <a href="login.html" class="footlink">Login</a><br />
+        </td>
+        <td>
+          <a href="https://www.facebook.com/CodeSquadOrg" class="footlink" target="_blank" rel="noopener noreferrer">Facebook</a><br>
+          <a href="https://www.instagram.com/" class="footlink" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+          <a href="https://twitter.com/home" class="footlink" target="_blank" rel="noopener noreferrer">Twitter</a><br>
+        </td>
+        <td>
+          <a href="http://codesquad.org/" target="_blank" rel="noopener noreferrer">
+            <img src="./public/images/CodeSquad-logo-b.png" alt="CodeSquad Logo" id="codesquad-logo">
+            </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+    
+</div>
   
-    <h3>VISIT US</h3>
-  
-  CodeSquad Comics<br />
-  123 Dorchester Avenue<br />
-  Boston MA 02124
-  
-  <h3>LINKS</h3>
-  <a href="home.html" class="headfootlink">Home</a><br />
-  <a href="about.html" class="headfootlink">About</a><br />
-  <a href="login.html" class="headfootlink">Login</a><br />
-  
-  <h3>FOLLOW US</h3>
-  <a href="https://www.facebook.com/CodeSquadOrg" target="_blank" rel="noopener noreferrer">Facebook</a><br>
-  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a><br>
-  <a href="https://twitter.com/home" target="_blank" rel="noopener noreferrer">Twitter</a><br>
-  
-  <h3>A PRODUCT OF</h3>
-  
-  <a href="http://codesquad.org/" target="_blank" rel="noopener noreferrer">
-  <img src="./public/images/CodeSquad-logo-b.png" alt="CodeSquad Logo" id="codesquad-logo">
-  </a>
-  
-  </div>
+    <!-- Footer End -->
 
 
   </body>
