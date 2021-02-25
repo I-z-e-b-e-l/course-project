@@ -15,12 +15,27 @@ body {
 }
 /* Header Styling */
 
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.link-menu {
+    width: 33vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
 #codesquad-comics-logo {
-    width: 300px;
-    padding: 1% 
-    /* padding-top: 1%;
-    padding-right: 70%;
-    padding-left: 1%; */
+    width: 20vw;
+    padding: 5%; 
+
 }
 
 .headlink {
@@ -28,11 +43,6 @@ body {
     list-style-type: none;
     text-decoration: none;
     padding: 1% 15% 2% 5%;
-    /* display: inline-block; */
-}
-
-.header li {
-    display: inline;
 }
 
 .header a:hover {
@@ -49,27 +59,25 @@ body {
 
 .footer {
     border-top: 5px #fccf14 solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
-.footer-table {
-    width: 100%;
-    text-align: left;
-    padding: 3%;
-}
-
-.footer-table a {
-    color:white;
+.footlink, .footer p {
+    color: white;
     list-style-type: none;
     text-decoration: none;
+    font-weight: normal;
+    font-size: 15px;
+
+    /* Why does vw make fonts the same size but not em?????*/
+
 }
 
-.footer-table th {
-    color:#fccf14;
-    text-align: left;
-    width: 23%;
-}
-
-.footer a:hover {
+.footer a:hover, h3 {
     color: #fccf14;
     font-weight: bold;
 }
@@ -101,19 +109,26 @@ input[name="add-new-comic"], input[type="submit"] {
    
 }   /*select by name/class instead?*/
 
+
+/* INDEX PAGE BUTTON */
+
+.button-div {
+    display: flex;
+}
+
 input[name="display-more"] {
     background-color: #fccf14;
-    margin-left: 40px;
+    margin: auto;
+    /* margin-left: 40px; */
     /* display: block; */
-
-    /* fix margins... why is pargin size different than padding size??*/
 }
 
 
-/* Content-Box (About + Admin + Create) Page Stylings */
+/* Content-Box (About + Admin + Create + Index) Page Stylings */
+
 
 .content-box {
-    background-color: white;
+    background-color: rgb(253, 252, 252);
     border: black 5px solid;
     margin: 6% auto;
     width: 75%;
@@ -131,10 +146,59 @@ input[name="display-more"] {
     padding: 0% 5%;
 }
 
-.content-box ul {
-    padding-left: 10%;
-    padding-bottom: 4%
+/* About Page Stylings */
+
+.collection-details {
+    display: flex;
+    justify-content: center;
 }
+
+
+
+/* Index Page Stylings */
+.comic-cover {
+    width: 200px
+}
+
+.figure-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+/* Whyyyy are some fig captions impacted but not others???? */
+
+figure {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 200px;
+    /* /* justify-content: center; */
+    /* align-items: center; */ */
+}
+
+figcaption {
+    text-align: center
+}
+
+figure a, figure a:visited {
+    list-style-type: none;
+    text-decoration: none;
+    color: #063C5E
+}
+
+figure a:hover {
+    color: teal;
+    font-weight: bold;
+}
+
+figure a:active {
+    color: blue;
+    background-color: #fccf14;
+    font-weight: bold;
+}
+
 
 /* Create Page Stylings */
 
