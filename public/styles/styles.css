@@ -5,12 +5,24 @@ body {
     margin: 0px;
     overflow-x: hidden;
     background-image: linear-gradient(rgb(198, 238, 232), rgb(22, 125, 133));
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --tealblue: #063C5E; 
+    --yellow: #fccf14;
+    --white: white;
+    --lightblue: rgb(205, 218, 218);
+    --black: black;
+    --blue: blue;
+    --brightteal: teal;
 }
 
 /* Header & Footer Styling */
 .header, .footer {
-    background-color: #063C5E;
-    color: white;
+    background-color: var(--tealblue);
+    color: var(--white);
+    font-family: 'Fredericka the Great', cursive;
 
 }
 /* Header Styling */
@@ -39,26 +51,26 @@ body {
 }
 
 .headlink {
-    color:white;
+    color:var(--white);
     list-style-type: none;
     text-decoration: none;
     padding: 1% 15% 2% 5%;
 }
 
 .header a:hover {
-    color: #fccf14;
+    color: var(--yellow);
     font-weight: bold;
 }
 
 .header a:active {
-    color: blue;
-    background-color: #fccf14;
+    color: var(--blue);
+    background-color: var(--yellow);
 }
 
 /* Footer Styling */
 
 .footer {
-    border-top: 5px #fccf14 solid;
+    border-top: 5px var(--yellow) solid;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -67,7 +79,7 @@ body {
 }
 
 .footlink, .footer p {
-    color: white;
+    color: var(--white);
     list-style-type: none;
     text-decoration: none;
     font-weight: normal;
@@ -78,23 +90,28 @@ body {
 }
 
 .footer a:hover, h3 {
-    color: #fccf14;
+    color: var(--yellow);
     font-weight: bold;
 }
 
 .footer a:active {
-    color: blue;
-    background-color: #fccf14;
+    color: var(--blue);
+    background-color: var(--yellow);
 }
 
 #codesquad-logo {
         width: 150px;
     }
 
+.socials {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* Misc Page Stylings */
 
 hr {
-    background-color:#fccf14;
+    background-color:var(--yellow);
     border: 0;
     height: 5px;
     margin: 0px
@@ -103,7 +120,7 @@ hr {
 /* Big Yellow Button Stylings (Admin + Create + Index Pages) */
 
 input[name="add-new-comic"], input[type="submit"] {
-    background-color: #fccf14;
+    background-color: var(--yellow);
     margin: 0 auto;
     display: block;
    
@@ -117,7 +134,7 @@ input[name="add-new-comic"], input[type="submit"] {
 }
 
 input[name="display-more"] {
-    background-color: #fccf14;
+    background-color: var(--yellow);
     margin: auto;
     /* margin-left: 40px; */
     /* display: block; */
@@ -128,8 +145,8 @@ input[name="display-more"] {
 
 
 .content-box {
-    background-color: rgb(253, 252, 252);
-    border: black 5px solid;
+    background-color: var(--white);
+    border: var(--black) 5px solid;
     margin: 6% auto;
     width: 75%;
     padding-bottom: 3%;
@@ -138,7 +155,7 @@ input[name="display-more"] {
 
 .content-box h1, h2 {
     text-align: center;
-    color: #063C5E;
+    color: var(--tealblue);
     margin-top: 6%;
 }
 
@@ -157,7 +174,8 @@ input[name="display-more"] {
 
 /* Index Page Stylings */
 .comic-cover {
-    width: 200px
+    width: 100%;
+    /* width: 200px; */
 }
 
 .figure-box {
@@ -174,8 +192,9 @@ figure {
     flex-direction: column;
     flex-wrap: wrap;
     width: 200px;
+    /* width: 8vw; */
     /* /* justify-content: center; */
-    /* align-items: center; */ */
+    /* align-items: center; */ 
 }
 
 figcaption {
@@ -185,17 +204,17 @@ figcaption {
 figure a, figure a:visited {
     list-style-type: none;
     text-decoration: none;
-    color: #063C5E
+    color: var(--tealblue);
 }
 
 figure a:hover {
-    color: teal;
+    color: var(--brightteal);
     font-weight: bold;
 }
 
 figure a:active {
-    color: blue;
-    background-color: #fccf14;
+    color: var(--blue);
+    background-color: var(--yellow);
     font-weight: bold;
 }
 
@@ -232,8 +251,8 @@ figure a:active {
 
 
 input[name="edit"] {
-    background-color: #063C5E;
-    color: white;
+    background-color: var(--tealblue);
+    color: var(--white);
     width: 6em;
     /* padding-left: 0px; */
     /* margin: 0 auto;
@@ -243,8 +262,8 @@ input[name="edit"] {
  } 
 
 input[name="delete"] {
-    background-color: #fccf14;
-    color: black;
+    background-color: var(--yellow);
+    color: var(--black);
     width: 6em;
     /* padding-left: 0px; */
     /* margin: 1.5% auto;
@@ -253,18 +272,18 @@ input[name="delete"] {
 }
 
 .admin-table th {
-    background-color: rgb(205, 218, 218);
+    background-color: var(--lightblue);
     padding: 6px 8px;
-    border: black solid 1px; 
+    border: var(--black) solid 1px; 
 }
 
 .admin-table td {
     padding: 3px 10px;
-    border: black solid 1px; 
+    border: var(--black) solid 1px; 
 }
 
 .admin-table tr:nth-child(even){
-    background-color: rgb(205, 218, 218);
+    background-color: var(--lightblue);
 }
 
 .admin-table {
@@ -293,8 +312,8 @@ input[name="delete"] {
 }
 
 .child1 {
-    background-color: #063C5E;
-    border-color: #fccf14; 
+    background-color: var(--tealblue);
+    border-color: var(--yellow); 
     border-radius: 50px 50px 0px 0px;
     border-style: solid;
     border-width: 5px 5px 0px 5px; 
@@ -305,14 +324,14 @@ input[name="delete"] {
 
 .child1 h2 {
     text-align: center;
-    color: #fccf14;
+    color: var(--yellow);
     margin-top: 0px;
     padding-top: 20px;
 }
 
 .child1 img {
     width: 60%;
-    border-color: white;
+    border-color: var(--white);
     border-radius: 50px 50px 50px 50px;
     border-style: solid;
     border-width: 5px;
@@ -321,8 +340,8 @@ input[name="delete"] {
 }
 
 .child2 {
-    background-color: white;
-    border-color: #fccf14;
+    background-color: var(--white);
+    border-color: var(--yellow);
     border-radius: 0px 0px 50px 50px;
     border-style: solid;
     border-width: 5px;
@@ -333,7 +352,7 @@ input[name="delete"] {
 }
 
 .cardinfo {
-    color: #063C5E;
+    color: var(--tealblue);
     text-decoration: underline;
     font-weight: bold;
     font-style: normal; 
@@ -345,7 +364,7 @@ input[name="delete"] {
     margin-top: 0px;
     /* padding: 0%; */
     padding-right: 7%;
-    color: black;
+    color: var(--black);
     font-weight:normal;
 }
 
