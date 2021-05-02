@@ -26,13 +26,10 @@ body {
 
 }
 /* Header Styling */
-
-
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 
 .link-menu {
@@ -41,7 +38,7 @@ body {
   flex-direction: row;
   justify-content: flex-end;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  margin-right: 3vw;
 }
 
 #codesquad-comics-logo {
@@ -68,7 +65,6 @@ body {
 }
 
 /* Footer Styling */
-
 .footer {
     border-top: 5px var(--yellow) solid;
     display: flex;
@@ -83,10 +79,7 @@ body {
     list-style-type: none;
     text-decoration: none;
     font-weight: normal;
-    font-size: 15px;
-
-    /* Why does vw make fonts the same size but not em?????*/
-
+    font-size: 1rem;
 }
 
 .footer a:hover, h3 {
@@ -123,7 +116,6 @@ input[name="add-new-comic"], input[type="submit"] {
     background-color: var(--yellow);
     margin: 0 auto;
     display: block;
-   
 }   /*select by name/class instead?*/
 
 
@@ -150,6 +142,7 @@ input[name="display-more"] {
     margin: 6% auto;
     width: 75%;
     padding-bottom: 3%;
+
     /* padding-left: 1%; */
 }
 
@@ -157,6 +150,7 @@ input[name="display-more"] {
     text-align: center;
     color: var(--tealblue);
     margin-top: 6%;
+    font-family: 'Fredericka the Great', cursive;
 }
 
 .content-box p {
@@ -170,7 +164,9 @@ input[name="display-more"] {
     justify-content: center;
 }
 
-
+.collection-details ul {
+    padding: 0;
+}
 
 /* Index Page Stylings */
 .comic-cover {
@@ -219,32 +215,112 @@ figure a:active {
 }
 
 
-/* Create Page Stylings */
+/* Create + Log In + Update Page Stylings */
 
-/* form { */
-    /* background-color: lavender; */
-    /* width: 100%; */
+/* .form-box { */
+ /* ADD BACK IN LATER!!!! */
+    /* width: 24em;    
+    display: flex;
+    justify-content: center; */
+
+
+
+    /* margin: 3% 35% 3% 10%;
+    text-align: right; */
+
+    /* margin-left: 25%; */
+
+    /* align-items: stretch; */
 /* } */
 
-.form-box {
-    /* background-color: rgb(108, 182, 224); */
-    margin: 3% 35% 3% 10%;
+/* COME BACK AND ADD BACK IN LATER? */
+/* 
+.form-box form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+        /* width: 20em; */
+/* } */ 
+
+/* .form-box input { */
+    /* display: inline-block; */
+    /* display: block; */
+    /* display: flex;
+    align-self: flex-end; */
+/* } */
+
+/* DO I NEED THIS? MAYBE BRING BACK??*/
+/* .form-row-login label{
+    display: inline;
+} */
+
+#create-form-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color:purple;
+}
+
+
+#create-form-box form{
+    background-color: lawngreen;
+    width: 55%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: .5em; 
+    width: 100%;
+    /* background-color: slateblue */
+    }
+
+#create-form-box label {
+    /* width: 100%; */
+}
+
+
+.form-box input, .form-box select, .form-box input[type=number] {
+    /*     display: flex;
+        justify-content: flex-end;
+        padding: .5em; */
+      /* width: 60%; */
+      min-width: 60%;
+      box-sizing: border-box;
+      margin-left: .5em;
+      background-color: aquamarine;
+    }
+
+
+
+
+.form-row-login {
+    margin: 1em;
+}
+
+.form-row-update {
+    margin: 1em;
+}
+
+
+
+
+.form-row #synopsis{
+    height: 15vh;
+}
+
+/* .textarea {
     text-align: right;
-}
+} */
 
-.form-box input{
-    width: 250px;
-}
 
-#publisher {
-    width: 260px;
-}
 
 /* Re-do? - See update page*/
-.form-box input[type="textarea"]{
-    height: 150px;
+/* .form-box input[type="textarea"]{
+    height: 150px; */
     /* text-align:; */
-}
+
 
 
 /* Admin Page Stylings */
@@ -320,6 +396,7 @@ input[name="delete"] {
     /* border-bottom: 5px red solid; */
     margin-top: 0px;
     margin-bottom: 0px;
+    /* height: auto; */
 }
 
 .child1 h2 {
@@ -371,4 +448,249 @@ input[name="delete"] {
 .cardtitle {
     font-style: italic;
 }
+
+
+
+/* mobile & tablet */
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+    /* header mobile & table */
+
+    .header {
+        /* height: 15vh; */
+        display: block;
+    }
+
+    #hamburger {
+        
+        color:var(--white);
+        position: absolute;
+        right: 0;
+        top: 4em;
+        margin-right: 5vw;
+
+        /* padding: 0.5rem 1rem; */
+    }
+
+    .link-menu {
+        display: none;
+    }
+
+    .link-menu.open {
+        background-color: var(--tealblue);
+        display: block;
+        position: absolute;
+        margin-left: 65vw;
+    }
+
+    .headlink {
+        display: block;
+        text-align: center;
+        padding: 7% 7% 7% 7%; 
+        border-top: 1px solid white;
+    }
+
+    #codesquad-comics-logo {
+        width: 15em;
+    }
+
+
+
+    /* footer mobile & tablet */
+
+    .footer {
+        display: block;
+    }
+
+    .follow-us {
+        display: inline-block;
+        /* display: flex; */
+        /* justify-content: flex-start; */
+        /* align-items: flex-start; */
+    }
+    
+    #codesquad-logo {
+        width: 15em;
+    }
+
+    .socials i {
+        font-size: 2rem;
+    }
+
+    .parent {
+        width: 90vw;
+        margin: auto;
+        margin-top: 5vh;
+    }
+
+    /* comic card mobile styling */
+    .child1 h2 {
+        margin:1vh;
+    }
+
+    .child1 img {
+        margin-top: 1vh;
+    }
+
+    /* create page + login + ????? mobile & tablet styling */
+
+    .content-box {
+        width: 90%;
+    }
+
+    .form-box {
+        display: flex;
+        /* flex-wrap: wrap; */
+    }
+
+    .form-fields> div {
+        display: flex;
+        /* flex-wrap: wrap; */
+    }
+
+    .form-fields {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: mediumvioletred;
+        /* max-width: 350px; */
+    }
+
+    .form-row-login {
+        background-color: mediumslateblue;
+        width: 20em;
+        justify-content: flex-end;
+        /* display: flex;
+        flex-wrap: wrap; */
+    }
+
+    .form-row-login label, .form-row-login input{
+        background-color: aquamarine;
+        /* display: flex;
+        flex-wrap: wrap; */
+    }
+
+    /* why is this not making a new line? */
+
+    #create-form-box label {
+        background-color: tomato;
+        display: block;
+    }
+
+
+    #create-form-box input, #create-form-box select {
+        background-color: lavender;
+        display: block;
+        /* width: 100%; */
+    }
+
+
+
+
+    /* .content-box {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .form-box {
+        align-self: center;
+        width: 80%;
+    } */
+
+
+
+
+}
+
+
+/* Laptop */
+@media screen and (min-width: 769px) {
+   
+    /* .header, .footer {
+        background-color: aqua;
+    } */
+
+    #hamburger {
+        display: none;
+    }
+
+    /* create page + ????? laptop styling */
+    .content-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-box {
+        align-self: center;
+    }
+
+
+}
+
+/* Larger Monitor */
+@media screen and (min-width: 1024px) {
+
+    .parent {
+        display: flex;
+        width: 90vw;
+        height: auto;
+        margin-left: 5%;
+        margin-bottom: 3%;
+        border-color: var(--yellow); 
+        border-radius: 50px 50px 50px 50px;
+        border-style: solid;
+        border-width: 5px 5px 5px 5px; 
+        box-sizing: border-box;
+    }
+
+    .child1, .child2 {
+        border: none;
+        /* box-sizing:border-box; */
+        /* height: 100%; */
+    }
+
+    .child1 {
+        width: 40%;
+        border-radius: 45px 0px 0px 45px;
+        border-width: 5px 5px 5px 5px;
+        /* display: flex;
+        flex-direction: column; */
+    }
+
+    .child2 {
+        width: 60%;
+        border-radius: 0px 50px 50px 0px;
+        margin-bottom: 0px ;
+        /* height: 100%; */
+    }
+
+    .child1 img {
+        margin-top: 1.5vh;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .child1 h2 {
+        margin-top: 2vh;
+    }
+
+    /* create page + ????? large moitor styling */
+    .content-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-box {
+        align-self: center;
+    }
+
+}
+
+
+
+
+
+ 
 
