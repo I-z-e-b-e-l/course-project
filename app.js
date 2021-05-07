@@ -28,7 +28,7 @@ app.set('view engine', 'ejs');
     // });
 
     app.get('/', (request, response) => {
-        response.render('/pages/index');
+        response.render('pages/index');
     });
 
     // app.get('/about', (request, response) => {
@@ -39,7 +39,7 @@ app.set('view engine', 'ejs');
     // });
 
     app.get('/about', (request, response) => {
-        response.render('/pages/about');
+        response.render('pages/about');
     });
 
     // app.get('/login', (request, response) => {
@@ -50,7 +50,7 @@ app.set('view engine', 'ejs');
     // });
 
     app.get('/login', (request, response) => {
-        response.render('/pages/login');
+        response.render('pages/login');
     });
 
     // app.get('/admin-console', (request, response) => {
@@ -61,7 +61,7 @@ app.set('view engine', 'ejs');
     // });
 
     app.get('/admin-console', (request, response) => {
-        response.render('/pages/admin');
+        response.render('pages/admin');
     });
 
     // app.get('/admin-console/create-book', (request, response) => {
@@ -72,7 +72,7 @@ app.set('view engine', 'ejs');
     // });
 
     app.get('/admin-console/create-book', (request, response) => {
-        response.render('/pages/create');
+        response.render('pages/create');
     });
 
 // Create 2 GET routes with parameter with the following information:
@@ -84,7 +84,7 @@ app.set('view engine', 'ejs');
 // });
 
 app.get('/books/:id', (request, response) => {
-    response.render('/pages/book');
+    response.render('pages/book');
 });
 
 // app.get('/admin-console/update-book/:id', (request, response) => {
@@ -92,7 +92,7 @@ app.get('/books/:id', (request, response) => {
 // });
 
 app.get('/admin-console/update-book/:id', (request, response) => {
-    response.render('/pages/update');
+    response.render('pages/update');
 });
 
 
