@@ -7,7 +7,9 @@
   <h1>UPDATE COMIC</h1>
 
   <div class="form-box">
-    <form>
+    <form action="" method="post">
+    <!-- <form action="/book/specific book" method="post?"> -->
+    <!-- <form action="/books/<%= editBook._id %>?_method=PUT" method="POST"> -->
 
       <div class="form-row-update">
         <label for="title">Title:</label>
@@ -58,6 +60,12 @@
         <label for="synopsis">Synopsis:</label>
         <textarea name="synopsis" rows="6" cols="33">Synopsis value stored in database</textarea>
       </div>
+
+      <div class="form-row-update">
+        <label for="book-image">Book Image:</label>
+         <input type="text" name="book-image" value="">
+       </div>
+
 
   </div>
 

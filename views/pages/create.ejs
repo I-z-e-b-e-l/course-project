@@ -9,7 +9,10 @@
   <h1>CREATE NEW COMIC</h1>
 
   <div class="form-box" id="create-form-box">
-    <form>
+    <form method="post" action="/book">
+      <!-- add method and actions -->
+    <!-- <form action="/books/<%= editBook._id %>?_method=PUT" method="POST">
+  what should the action actually be?-->
 
       <div class="form-row"> 
         <label for="title">Title:</label>
@@ -59,6 +62,12 @@
         <input type="textarea"  id="synopsis" name="synopsis" value="synopsis">
       </div>
     </div>
+
+    <div class="form-row">
+      <label for="book-image">Book Image:</label>
+       <input type="text" name="book-image" value="">
+     </div>
+
       <input type="submit">
 
     </form>
