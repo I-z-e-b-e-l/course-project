@@ -8,48 +8,63 @@ const {v4:uuid} = require ('uuid');
 
 module.exports = {
 
+    create_book_post: (request, response ) => {
+        const {_id = uuid(), title, author, publisher, genre, pages, rating, synopsis, images} = request.body; 
+        data.push({_id, title, author, publisher, genre, pages, rating, synopsis, images});
+        response.redirect('/admin');
+    },
+
+
+
+
+
+
     single_book: (request, response) => {
         const {id} = request.params;
         //const bookObjectResult = result of searching array for object with id that matches params
         const bookObjectResult = data.find(book => book._id === String(id));
-        //do we also need to set variables for the items that are within bookObjectResult?
 
-        //should this be response.send instead?
-        response.render("pages/book", {bookObject: bookObjectResult})
-    },
-
-    //Do we separate here for getting the create page (I thought that lived under admin?) and posting the information? on admin controller we have: 
-    // create: (request, response) => {
-    //     response.render("pages/create")
-    // },
-
-
-    create_book_post: (request, response ) => {
-        const {_id = uuid(), title, author, publisher, genre, pages, rating, synopsis, images} = request.body; 
-        // const newBookTitle = request.body.title;
-
+        //data from comicBook aka bookObjectResult goes to book.ejs
+        response.render("pages/book", {comicBook: bookObjectResult})
     },
 
 
 
-    //similar here, do we have separate things happening when we get the data to update, and when we put
+
     update_book: (request, response) => {
         const {id} = request.params;
         const bookObjectResult = data.find(book => book._id === String(id));
-        //something
-        response.redirect('/books');
+        //use let - overwrite variables 
+        // let { id } = request.params;
+        let updatedTitle = request.body.title;
+        let updatedAuthor = request.body.author;
+        let updatedPublisher = request.body.publisher;
+        let updatedGenre = request.body.genre;
+        let updatedPages = request.body.pages;
+        let updatedRating = request.body.rating;
+        let updatedSynopsis = request.body.synopsis;
+        let updatedImages = request.body.images;
+
+        bookObjectResult.title = updatedTitle;
+        bookObjectResult.author = updatedAuthor;
+        bookObjectResult.publisher = updatedPublisher;
+        bookObjectResult.genre = updatedGenre;
+        bookObjectResult.pages = updatedPages;
+        bookObjectResult.rating = updatedRating;
+        bookObjectResult.synopsis = updatedSynopsis;
+        bookObjectResult.images = updatedImages;
+
+        response.redirect('/admin');
     },
-
-
 
 
     delete_book: (request, response) => {
         const {id} = request.params;
         const bookObjectResult = data.find(book => book._id === String(id));
-        //something
-        response.redirect('/books');
+        //find where the book is in the array (data.js) - then delete it
+        const index = data.indexOf(bookObjectResult);
+        data.splice(index, 1);
+        response.redirect('/admin');
     }
-
-
 
 }

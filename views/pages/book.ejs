@@ -8,27 +8,28 @@
 <div class="parent">
 
   <div class="child1">
-    <h2>PARABLE OF THE SOWER</h2>
 
-    <img src="./public/images/parable-of-the-sower.jpg" alt="Parable of the Sower book cover">    
+    <h2><%= comicBook.title %></h2>
+
+    <img src="/images/<%= comicBook.image %>" alt="<%= comicBook.title %> book cover">    
 
   </div>
 
   <div class="child2">
 
-       <h3><span class="cardinfo">Title:</span> <span class="cardtitle">Parable of the Sower</span></h3>
+       <h3><span class="cardinfo">Title:</span> <span class="cardtitle"><%= comicBook.title %></span></h3>
   
-      <h3><span class="cardinfo">Author:</span> Octavia E. Butler</h3>
+      <h3><span class="cardinfo">Author:</span> <%= comicBook.author %></h3>
 
-      <h3><span class="cardinfo">Publisher:</span> Harry N. Abrams</h3>
+      <h3><span class="cardinfo">Publisher:</span> <%= comicBook.publisher %></h3>
 
-      <h3><span class="cardinfo">Genre:</span> dystopian</h3>
+      <h3><span class="cardinfo">Genre:</span> <%= comicBook.genre %></h3>
 
-      <h3><span class="cardinfo">Number of pages:</span> 284</h3>
+      <h3><span class="cardinfo">Number of pages:</span> <%= comicBook.pages %></h3>
 
-      <h3><span class="cardinfo">Rating:</span> 4</h3>
+      <h3><span class="cardinfo">Rating:</span> <%= comicBook.rating %></h3>
 
-      <h3><span class="cardinfo">Synopsis:</span> In this graphic novel adaptation of Octavia E. Butler’s Parable of the Sower by Damian Duffy and John Jennings, the award-winning team behind Kindred: A Graphic Novel Adaptation, the author portrays a searing vision of America’s future. In the year 2024, the country is marred by unattended environmental and economic crises that lead to social chaos. Lauren Olamina, a preacher’s daughter living in Los Angeles, is protected from danger by the walls of her gated community. However, in a night of fire and death, what begins as a fight for survival soon leads to something much more: a startling vision of human destiny . . . and the birth of a new faith.</h3>
+      <h3><span class="cardinfo">Synopsis:</span> <%= comicBook.synopsis %></h3>
 
   </div>
 

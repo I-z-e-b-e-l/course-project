@@ -13,19 +13,19 @@
 
       <div class="form-row-update">
         <label for="title">Title:</label>
-        <input type="text" name="title" value="title value stored in database">
+        <input type="text" name="title" value="<%= comicBook.title %>">
       </div>
 
       <div class="form-row-update">
         <label for="author">Author:</label>
-        <input type="text" name="author" value="Author value stored in database">
+        <input type="text" name="author" value="<%= comicBook.author %>">
       </div>
 
       <!--value didn't work?? -->
       <div class="form-row-update">
         <label for="publisher">Publisher</label>
-        <select id="publisher" name="publisher" value="publisher value stored in database">
-
+        <select id="publisher" name="publisher" value="<%= comicBook.publisher %>">
+          <!-- shuld ths be done differently? -->
         <option> Publisher value stored in database </option>
         <option value="boom-box"> BOOM Box</option>
         <option value ="marvel">Marvel</option>
@@ -42,28 +42,28 @@
 
       <div class="form-row-update">
        <label for="genre">Genre:</label>
-        <input type="text" name="genre" value="Genre data stored in database">
+        <input type="text" name="genre" value="<%= comicBook.genre %>">
       </div>
 
       <div class="form-row-update">
        <label for="number-of-pages">Number of Pages:</label>
-       <input type="number" name="number-of-pages" value="255">
+       <input type="number" name="number-of-pages" value="<%= comicBook.pages %>">
       </div>
 
       <div class="form-row-update">
        <label for="rating">Rating:</label>
-        <input type="number" id="rating" name="rating" min="1" max="5" value="5">
+        <input type="number" id="rating" name="rating" min="1" max="5" value="<%= comicBook.rating %>">
       </div> 
 
       <!-- style rows/cols w/ css instead? -->
       <div class="form-row-update">
         <label for="synopsis">Synopsis:</label>
-        <textarea name="synopsis" rows="6" cols="33">Synopsis value stored in database</textarea>
+        <textarea name="synopsis" rows="6" cols="33"><%= comicBook.synopsis %></textarea>
       </div>
 
       <div class="form-row-update">
         <label for="book-image">Book Image:</label>
-         <input type="text" name="book-image" value="">
+         <input type="text" name="book-image" value="<%= comicBook.img %>">
        </div>
 
 

@@ -1,6 +1,6 @@
 // Require the data.js that is in the starter-files directory - file path right?
 //this will eventually change
-const data = require('../starter-files/data.js');
+const {comics} = require('../starter-files/data.js');
 
 
 // Use Module Exports that will have a value of an object. The object will include the following:
@@ -12,7 +12,7 @@ module.exports = {
 
 //May need to add additional value related to comic object
     index: (request, response) => {
-        response.render('pages/index', {comicBookData: data});
+        response.render('pages/index', {comicBookData: comics});
     },
 
 // KEY: about VALUE: handler that will show the about page

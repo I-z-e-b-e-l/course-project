@@ -22,21 +22,12 @@ const bookController = require('../controllers/book-controller');
 //     .delete(bookController.delete)
 
 
-
-
-
-
-
 ///books/
 //post
 //Post a new book into the database from Create Book page
 //Redirect to admin-console landing page
 router.route('/')
     .post(bookController.create_book_post)
-
-
-
-
 
 
 // /books/:id    
@@ -46,25 +37,17 @@ router.route('/:id')
     .get(bookController.single_book)
 
 
-
-
 // /books/:id    
 // update
 //Update a book and put into the database from Update Book page
 ////Redirect to admin-console landing page
-
     .put(bookController.update_book)
-
-
-
-
 
 
 // /books/:id    
 // delete
 //Delete a book from the database by clicking the delete button on Admin Console page
 ////Redirect to admin-console landing page
-
     .delete(bookController.delete_book)
 
 
