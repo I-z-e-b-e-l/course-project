@@ -24,10 +24,10 @@
 
 <!-- link to partial book-listing.ejs here -->
 
-          <!-- comicBookData is the key that allows access -->
-          <% comicBookData.forEach(comicBook=> { %>
+          <!-- comicBook is the key that allows access -->
+          <% comicBook.comics.forEach(comic=> { %>
 
-            <%- include('../partials/single-book', {comicBook : comicBook}) %> 
+            <%- include('../partials/book-listing', {comicBook : comic}) %> 
 
             <% }) %>
 

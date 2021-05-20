@@ -6,7 +6,7 @@ const data = require('../starter-files/data.js');
 module.exports = {
     //may need to change in the future
     admin: (request, response) => {
-        response.render("pages/admin", {comicBook: bookObjectResult})
+        response.render("pages/admin", {comicBook: data})
     },
 
     //admin access to create page
