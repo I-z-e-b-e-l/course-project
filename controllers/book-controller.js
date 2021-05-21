@@ -3,15 +3,18 @@
 
 //will change eventually
 const { request, response } = require('express');
-let data = require('../starter-files/data.js');
+let {comics} = require('../starter-files/data.js');
 const {v4:uuid} = require ('uuid');
 
 module.exports = {
 
     create_book_post: (request, response ) => {
         const {_id = uuid(), title, author, publisher, genre, pages, rating, synopsis, images} = request.body; 
-        data.push({_id, title, author, publisher, genre, pages, rating, synopsis, images});
-        response.redirect('/admin');
+        comics.push({_id, title, author, publisher, genre, pages, rating, synopsis, images});
+        //response.redirect sends to a route, not a page so use admin-console, not admin
+        console.log(comics);
+        //console log comics to make sure the push worked
+        response.redirect('/admin-console');
     },
 
 
@@ -22,8 +25,8 @@ module.exports = {
     single_book: (request, response) => {
         const {id} = request.params;
         //const bookObjectResult = result of searching array for object with id that matches params
-        const bookObjectResult = data.find(book => book._id === String(id));
-
+        const bookObjectResult = comics.find(book => book._id === String(id));
+        console.log(bookObjectResult)
         //data from comicBook aka bookObjectResult goes to book.ejs
         response.render("pages/book", {comicBook: bookObjectResult})
     },
@@ -33,7 +36,8 @@ module.exports = {
 
     update_book: (request, response) => {
         const {id} = request.params;
-        const bookObjectResult = data.find(book => book._id === String(id));
+        const bookObjectResult = comics.find(book => book._id === String(id));
+        console.log(bookObjectResult)
         //use let - overwrite variables 
         // let { id } = request.params;
         let updatedTitle = request.body.title;
@@ -54,17 +58,18 @@ module.exports = {
         bookObjectResult.synopsis = updatedSynopsis;
         bookObjectResult.images = updatedImages;
 
-        response.redirect('/admin');
+        console.log(bookObjectResult)
+        response.redirect('/admin-console');
     },
 
 
     delete_book: (request, response) => {
         const {id} = request.params;
-        const bookObjectResult = data.find(book => book._id === String(id));
-        //find where the book is in the array (data.js) - then delete it
-        const index = data.indexOf(bookObjectResult);
-        data.splice(index, 1);
-        response.redirect('/admin');
+        const bookObjectResult = comics.find(book => book._id === String(id));
+        //find where the book is in the array (comics) using indexof() - log that location as "index" - then delete it using splice(): at position index, remove 1 item
+        const index = comics.indexOf(bookObjectResult);
+        comics.splice(index, 1);
+        response.redirect('/admin-console');
     }
 
 }

@@ -12,7 +12,7 @@ module.exports = {
 
 //May need to add additional value related to comic object
     index: (request, response) => {
-        response.render('pages/index', {comicBookData: comics});
+        response.render('pages/index', {comicBooks: comics});
     },
 
 // KEY: about VALUE: handler that will show the about page

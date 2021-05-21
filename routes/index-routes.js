@@ -15,6 +15,7 @@
 
     //Using Router, you need 3 routes. Below is the information that each routes needs:
         //PATH: '/' HANDLER: will go to site-router.js
+        // local host:3000 - anything not books or admin
         router.use('/', siteRouter);
 
         //PATH: '/books' HANDLER: will go to book-router.js

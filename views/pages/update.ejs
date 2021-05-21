@@ -1,3 +1,7 @@
+<!-- THIS IS THE UPDATE COMIC PAGE -->
+<!-- Pre Loads Data for Every Book and Enables Editing -->
+
+
 <%- include('../partials/head') -%> 
 
 <%- include('../partials/nav') -%> 
@@ -7,9 +11,8 @@
   <h1>UPDATE COMIC</h1>
 
   <div class="form-box">
-    <form action="" method="post">
-    <!-- <form action="/book/specific book" method="post?"> -->
-    <!-- <form action="/books/<%= editBook._id %>?_method=PUT" method="POST"> -->
+    <form action="/books/<%=comicBook._id%>?_method=put" method="post">
+
 
       <div class="form-row-update">
         <label for="title">Title:</label>

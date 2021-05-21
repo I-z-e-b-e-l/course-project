@@ -31,14 +31,16 @@ const adminController = require('../controllers/admin-controller');
 //Does it matter that the admin page currently has books hardcoded? 
 // is create/update even in the ejs file?
 
-
+// this is /admin-console
 router.route('/')
     .get(adminController.admin)
 
+// this is /admin-console/create-book
 router.route('/create-book')
     .get(adminController.create)
-    //what else goes here 
 
+
+// this is /admin-console/update-book/:id
 router.route('/update-book/:id')
     .get(adminController.update)
     //what goes here?

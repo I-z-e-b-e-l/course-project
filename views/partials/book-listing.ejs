@@ -1,11 +1,19 @@
+<!-- THIS IS FOR THE ADMIN-CONSOLE LANDING PAGE LISTINGS-->
+
+
 <tr>
     <td>
         <%= comicBook.title %>
     </td>
     <td>
-      <input type="button" name="edit" value="EDIT">
+      <a href="/admin-console/update-book/<%= comicBook._id %>">
+        <button>EDIT</button>
+      </a>
     </td>
     <td>
-      <input type="button" name="delete" value="DELETE">
+      <form action="/books/<%= comicBook._id %>?_method=delete" method="POST">
+        <input type="submit" name="delete" value="DELETE">
+      </form>
+      
     </td>
   </tr>

@@ -1,9 +1,10 @@
+<!-- THIS IS FOR COMIC BOOKS APEAPING ON THE INDEX PAGE 
+aka ADMIN.ejs-->
 
 
 <figure>
 
-
-    <a href="/views/pages/book/<%=comicBook._id%>.ejs">
+    <a href="/books/<%=comicBook._id%>">
       <img src="/images/<%= comicBook.image %>" alt="Comic book cover" class="comic-cover">
     </a>
 
@@ -11,23 +12,12 @@
     by <%= comicBook.author %><br />
     <%= comicBook.rating %> <br>
 
-    <a href="/views/pages/book/<%=comicBook._id%>.ejs">Details</a>
+    <!-- <a href="/views/pages/book/<%=comicBook._id%>.ejs">Details</a> -->
+    <a href="/books/<%=comicBook._id%>">Details</a>
   </figcaption>
 
   </figure>
 
-<!-- Use EJS to render the data for the image, title, author, rating, and the ids
-In order for the links in this single-book.ejs to work, they should start off with ./book/ and then render the id of the comic book. This structure would be the complete relative path.
- -->
 
-
-
-  <!-- 
-    comicCoverImg
-    comicTitle
-    comicAuthor
-    comicRating
-    details?
-   -->
 
    <!-- How to do EJS for details links with an ID -->

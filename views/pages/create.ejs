@@ -9,10 +9,9 @@
   <h1>CREATE NEW COMIC</h1>
 
   <div class="form-box" id="create-form-box">
-    <form method="post" action="/book">
+    <form method="post" action="/books">
       <!-- add method and actions -->
-    <!-- <form action="/books/<%= editBook._id %>?_method=PUT" method="POST">
-  what should the action actually be?-->
+
 
       <div class="form-row"> 
         <label for="title">Title:</label>
@@ -46,8 +45,8 @@
       </div>
 
       <div class="form-row"> 
-        <label for="number-of-pages">Number of Pages:</label>
-        <input type="number" name="number-of-pages" value="Number of Pages">
+        <label for="pages">Number of Pages:</label>
+        <input type="number" name="pages" placeholder="Number of Pages">
       </div>
 
       <!-- look up better input for rating? -->

@@ -1,12 +1,14 @@
 //may need to eventually change
 const { response } = require('express');
-const data = require('../starter-files/data.js');
+// const data = require('../starter-files/data.js');
 
+//{comics} will set to just the array that is in data.js
+const {comics} = require('../starter-files/data.js');
 
 module.exports = {
     //may need to change in the future
     admin: (request, response) => {
-        response.render("pages/admin", {comicBook: data})
+        response.render("pages/admin", {comicBooks: comics})
     },
 
     //admin access to create page
@@ -18,7 +20,7 @@ module.exports = {
     //admin access to update  page - add stuff to use uuids
     update: (request, response) => {
         const {id} = request.params;
-        const bookObjectResult = data.find(book => book._id === String(id));
+        const bookObjectResult = comics.find(book => book._id === String(id));
         response.render("pages/update", {comicBook: bookObjectResult})
     }
 
