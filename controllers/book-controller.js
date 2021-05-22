@@ -19,7 +19,7 @@ module.exports = {
     // },
 
     create_book_post: (request, response ) => {
-        const newComic = new Comic ({
+        const newComic = new Comics ({
             title: request.body.title,
             author: request.body.author,
             publisher: request.body.publisher,
@@ -46,7 +46,7 @@ module.exports = {
 
     single_book: (request, response) => {
         const {id} = request.params;
-        Comic.findOne({_id: comicId}, (error, allComics) => {
+        Comics.findOne({_id: comicId}, (error, allComics) => {
             if (error) {
                 return error;
             } else {
@@ -87,7 +87,7 @@ module.exports = {
     update_book: (request, response) => {
         const {id} = request.params;
 
-        Comic.findByIdAndUpdate({_id: id}, {$set: {
+        Comics.findByIdAndUpdate({_id: id}, {$set: {
             title: request.body.title,
             author: request.body.author,
             publisher: request.body.publisher,
@@ -117,7 +117,7 @@ module.exports = {
 
     delete_book: (request, response) => {
         const {id} = request.params;
-        Comic.deleteOne({_id: id}, (error) => {
+        Comics.deleteOne({_id: id}, (error) => {
             if (error) {
                 return error;
             } else {

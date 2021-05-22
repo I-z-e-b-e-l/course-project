@@ -14,11 +14,12 @@ module.exports = {
     // },
 
     index: (request, response) => {
-        Comic.find({}, (error, allComics) => {
+        Comics.find({}, (error, allComics) => {
             if (error) {
                 return error;
             } else {
-                response.render('pages/index', { comics: allComics });
+                console.log(allComics)
+                response.render('pages/index', { comicBooks: allComics });
             }
         })
     },

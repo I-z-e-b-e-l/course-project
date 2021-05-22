@@ -52,4 +52,4 @@ const comicSchema = new Schema ({
 
 const Comic = mongoose.model('Comic', comicSchema)
 
-module.exports =Author;
+module.exports=Comic;

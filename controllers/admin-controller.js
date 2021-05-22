@@ -13,11 +13,11 @@ module.exports = {
     // },
 
     admin: (request, response) => {
-        Comic.find({}, (error, allComics) => {
+        Comics.find({}, (error, allComics) => {
             if (error) {
                 return error;
             } else {
-                response.render("pages/admin", {comicBooks: AllComics});
+                response.render("pages/admin", {comicBooks: allComics});
             }
         })
     },
@@ -36,7 +36,7 @@ module.exports = {
 
     update: (request, response) => {
         const { id } = request.params;
-        Comic.findOne({_id: id}, (error, foundBook) => {
+        Comics.findOne({_id: id}, (error, foundBook) => {
             if (error) {
                 return error;
             } else {
