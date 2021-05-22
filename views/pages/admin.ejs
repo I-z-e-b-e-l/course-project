@@ -1,10 +1,8 @@
+<!-- ADMIN PAGE -->
+
 <%- include('../partials/head') -%> 
 
-
 <%- include('../partials/nav') -%> 
-
-
-<!-- update create button to ./admin-console/create-book -->
 
 <div class=content-box>
 
@@ -12,11 +10,9 @@
 
   <a href="/admin-console/create-book">
       <button class="yellowbutton" name="add-new-comic" value="ADD NEW COMIC">
-    ADD NEW COMIC
-  </button>
+        ADD NEW COMIC
+      </button>
   </a>
-
-  
 
   <br /><br />
 
@@ -29,15 +25,13 @@
       </tr>
     </thead>
 
-<!-- link to partial book-listing.ejs here -->
+<!-- BOOK-LISTING.EJS-->
 
-          <!-- comicBook is the key that allows access -->
-          <!-- comicBook.comics is the actually array in data.js -->
           <% comicBooks.forEach(comic=> { %>
 
             <%- include('../partials/book-listing', {comicBook : comic}) %> 
 
-            <% }) %>
+          <% }) %>
 
 <!-- 
         <tr>

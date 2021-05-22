@@ -8,7 +8,7 @@
 
   <h1>CREATE NEW COMIC</h1>
 
-  <div class="form-box" id="create-form-box">
+  <div class="form-box-create" id="create-form-box">
     <form method="post" action="/books">
       <!-- add method and actions -->
 
@@ -58,14 +58,19 @@
       <!-- this doesn't look the way it's supposed to? -->
       <div class="form-row"> 
         <label for="synopsis">Synopsis:</label>
-        <input type="textarea"  id="synopsis" name="synopsis" value="synopsis">
+        <input type="textarea" rows="10" cols="10" id="synopsis" name="synopsis" value="synopsis">
       </div>
+
+      <div class="form-row">
+        <label for="book-image">Book Image:</label>
+        <input type="text" name="book-image" value="">
+      </div>
+
+
+
     </div>
 
-    <div class="form-row">
-      <label for="book-image">Book Image:</label>
-       <input type="text" name="book-image" value="">
-     </div>
+
 
       <input type="submit">
 

@@ -10,8 +10,8 @@
 
   <h1>UPDATE COMIC</h1>
 
-  <div class="form-box">
-    <form action="/books/<%=comicBook._id%>?_method=put" method="post">
+  <div class="form-box-update">
+    <form id="update-book-form" action="/books/<%=comicBook._id%>?_method=put" method="post">
 
 
       <div class="form-row-update">
@@ -26,7 +26,7 @@
 
       <!--value didn't work?? -->
       <div class="form-row-update">
-        <label for="publisher">Publisher</label>
+        <label for="publisher">Publisher:</label>
         <select id="publisher" name="publisher" value="<%= comicBook.publisher %>">
           <!-- shuld ths be done differently? -->
         <option> Publisher value stored in database </option>
@@ -61,7 +61,7 @@
       <!-- style rows/cols w/ css instead? -->
       <div class="form-row-update">
         <label for="synopsis">Synopsis:</label>
-        <textarea name="synopsis" rows="6" cols="33"><%= comicBook.synopsis %></textarea>
+        <textarea name="synopsis" rows="6" cols=""><%= comicBook.synopsis %></textarea>
       </div>
 
       <div class="form-row-update">

@@ -110,12 +110,17 @@ hr {
     margin: 0px
 }
 
+a {
+        text-decoration: none;
+}
+
 /* Big Yellow Button Stylings (Admin + Create + Index Pages) */
 
-input[name="add-new-comic"], input[type="submit"] {
+input[name="add-new-comic"], input[type="submit"], .yellowbutton {
     background-color: var(--yellow);
     margin: 0 auto;
     display: block;
+
 }   /*select by name/class instead?*/
 
 
@@ -215,6 +220,9 @@ figure a:active {
 }
 
 
+
+
+
 /* Create + Log In + Update Page Stylings */
 
 /* .form-box { */
@@ -222,7 +230,6 @@ figure a:active {
     /* width: 24em;    
     display: flex;
     justify-content: center; */
-
 
 
     /* margin: 3% 35% 3% 10%;
@@ -255,71 +262,82 @@ figure a:active {
     display: inline;
 } */
 
-#create-form-box {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color:purple;
-}
 
 
-#create-form-box form{
-    background-color: lawngreen;
-    width: 55%;
+
+/* CREATE PAGE */
+
+.form-box-create {
+    width: 40%;
+    align-self: center;
+    padding-right: 10%;
+    background-color: yellowgreen;
 }
 
 .form-row {
+    margin: 1em;
+    margin-bottom: 2em;
     display: flex;
     justify-content: flex-end;
-    padding: .5em; 
-    width: 100%;
-    /* background-color: slateblue */
-    }
+}
 
-#create-form-box label {
-    /* width: 100%; */
+.form-box-create input, .form-box-create select, .form-box-create input[type=number] {
+    min-width: 60%;
+    box-sizing: border-box;
+    margin-left: .5em;
+    background-color: aquamarine;
 }
 
 
-.form-box input, .form-box select, .form-box input[type=number] {
-    /*     display: flex;
-        justify-content: flex-end;
-        padding: .5em; */
-      /* width: 60%; */
-      min-width: 60%;
-      box-sizing: border-box;
-      margin-left: .5em;
-      background-color: aquamarine;
-    }
 
 
+/* LOGIN PAGE */
 
+
+.form-box-login {
+    width: 40%;
+    align-self: center;
+    padding-right: 10%;
+}
 
 .form-row-login {
     margin: 1em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-box-login input, .form-box-login select, .form-box-login textarea {
+    min-width: 20em;
+    box-sizing: border-box;
+    margin-left: .5em;
+}
+
+
+
+
+/* Update Page */
+
+.form-box-update {
+    width: 30em;
+    align-self: center;
+    padding-right: 10%;
 }
 
 .form-row-update {
     margin: 1em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-box-update input, .form-box-update select, .form-box-update textarea {
+    min-width: 62%;
+    box-sizing: border-box;
+    margin-left: .5em;
 }
 
 
 
-
-.form-row #synopsis{
-    height: 15vh;
-}
-
-/* .textarea {
-    text-align: right;
-} */
-
-
-
-/* Re-do? - See update page*/
-/* .form-box input[type="textarea"]{
-    height: 150px; */
-    /* text-align:; */
 
 
 
@@ -466,9 +484,9 @@ input[name="delete"] {
         color:var(--white);
         position: absolute;
         right: 0;
-        top: 4em;
+        top: 5%;
         margin-right: 5vw;
-
+        font-size: 1.5em;
         /* padding: 0.5rem 1rem; */
     }
 
@@ -504,11 +522,8 @@ input[name="delete"] {
 
     .follow-us {
         display: inline-block;
-        /* display: flex; */
-        /* justify-content: flex-start; */
-        /* align-items: flex-start; */
     }
-    
+
     #codesquad-logo {
         width: 15em;
     }
@@ -522,6 +537,14 @@ input[name="delete"] {
         margin: auto;
         margin-top: 5vh;
     }
+
+
+    .visit-us, .links, .follow-us {
+        margin-bottom: 3em;
+    }
+
+
+
 
     /* comic card mobile styling */
     .child1 h2 {
@@ -603,6 +626,9 @@ input[name="delete"] {
 
 
 }
+
+
+
 
 
 /* Laptop */
