@@ -271,7 +271,6 @@ figure a:active {
     width: 40%;
     align-self: center;
     padding-right: 10%;
-    background-color: yellowgreen;
 }
 
 .form-row {
@@ -285,7 +284,6 @@ figure a:active {
     min-width: 60%;
     box-sizing: border-box;
     margin-left: .5em;
-    background-color: aquamarine;
 }
 
 
