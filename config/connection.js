@@ -1,10 +1,18 @@
 const mongoose = require ('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/codesquadComics',  { useNewUrlParser: true, useUnifiedTopology: true }, (error) => {
-    if (error) {
-        console.log("Error with MongoDB connectivity")
+
+mongoose.connect(process.env.DB_URL, {
+    useNewUrlParser: true, 
+    useUnifiedTopology: true,
+    useFindAndModify: false
+}, (err) => {
+    if(!err) {
+      console.log("Successful connection with MongoDB Server. Hurray! You're doing great!");  
     }
     else {
-        console.log("Successful connection with MongoDB Server. Hurray! You're doing great!")
+        console.log("Uh oh...Error with MongoDB's connectivity");
     }
-});
+  });
+
+
+

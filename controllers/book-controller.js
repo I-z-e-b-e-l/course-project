@@ -46,11 +46,12 @@ module.exports = {
 
     single_book: (request, response) => {
         const {id} = request.params;
-        Comics.findOne({_id: comicId}, (error, allComics) => {
+        // Comics.findOne({_id: comicId}, (error, allComics) => {
+            Comics.findOne({_id: id}, (error, foundComic) => {
             if (error) {
                 return error;
             } else {
-                response.render("pages/book", {comicBook: foundBook});
+                response.render("pages/book", {comicBook: foundComic});
             }
         })
     },

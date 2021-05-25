@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js"
   },
+  "engines":{
+    "node":"14.16.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/I-z-e-b-e-l/course-project.git"
@@ -18,13 +21,14 @@
   },
   "homepage": "https://github.com/I-z-e-b-e-l/course-project#readme",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "method-override": "^3.0.0",
-    "mongoose": "^5.12.10"
+    "mongoose": "^5.12.10",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "morgan": "^1.10.0",
     "nodemon": "^2.0.7",
     "uuid": "^8.3.2"
   }
