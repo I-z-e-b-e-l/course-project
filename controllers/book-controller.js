@@ -5,7 +5,6 @@
 const { request, response } = require('express');
 // let {comics} = require('../starter-files/data.js');
 const Comics = require ('../models/comic-model')
-const {v4:uuid} = require ('uuid');
 
 module.exports = {
 
