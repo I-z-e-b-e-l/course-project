@@ -55,9 +55,9 @@ module.exports = {
           const newUser = new User({
             username: request.body.username,
             password: hash
-          })
+          });
           newUser.save();
-          console.log(`The hash value being saved is: ${hash}`)
+          console.log(`The hash value being saved is: ${hash}`);
           response.redirect('/login');
       });
     },

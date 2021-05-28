@@ -12,11 +12,8 @@ const methodOverride = require('method-override');
 
 require('./config/connection');
 
-// require the Path module
 const path = require('path');
 
-//Use the Path module to point Node.js to the public directory that contains all of your assets (images, scripts.js, and styles.js) for your project
-//is this right?
 app.use(express.static(path.join(__dirname, 'public')));
 
 
